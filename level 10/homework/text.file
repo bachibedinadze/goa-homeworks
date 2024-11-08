@@ -1,0 +1,43 @@
+1. int (integer) ტიპი
+x = 10
+y = -5
+z = 0
+a = 100
+b = 4567
+c = 999999
+d = -123456789
+e = 2**10 (1000)
+f = int("23")
+g = int(3.14) (კონვერტაცია მთელი რიცხვით)
+
+
+
+2. str (string) ტიპი
+name = "John"
+greeting = 'Hello, World!'
+message = "Python is awesome!"
+empty = ""
+sentence = "The quick brown fox jumps over the lazy dog."
+quote = 'She said, "Hello!"'
+escaped = "He\'s my friend."
+concatenation = "Hello" + " " + "World!"
+multiline = """This is a multiline string."""
+formatted = f"My age is {25}"
+
+
+
+
+3. float (floating-point) ტიპი
+x = 3.14
+y = -5.67
+z = 0.0
+pi = 3.14159265359
+scientific = 1.2e3 (1200.0)
+negative_float = -0.99
+decimal = 0.333
+price = float("19.99")
+result = 10 / 3 (3.3333333333333335)
+rounded = round(2.71828, 2) (2.72)
+
+
+ონაცემთა ტიპის კონვერტაცია (ანუ კასტინგი) საჭიროა მაშინ, როცა საჭიროა სხვადასხვა ტიპის მონაცემების ერთმანეთთან შესატყვისობა ან მათთან ოპერაციების განხორციელება.
