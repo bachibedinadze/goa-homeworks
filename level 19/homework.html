@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .review-form button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .review-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Travel Adventure</h1>
+    <nav>
+        <a href="#top">Top</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#media">Media</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Popular Travel Destinations</h2>
+        <article>
+            <h3>1. Paris, France</h3>
+            <p>Paris is known for its art, fashion, and culture. It is a must-see destination for any traveler.</p>
+            <img src="https://via.placeholder.com/400x200" alt="Paris">
+            <br>
+        </article>
+        <article>
+            <h3>2. Tokyo, Japan</h3>
+            <p>Tokyo is a vibrant city blending tradition and modernity, with incredible food and entertainment.</p>
+            <img src="https://via.placeholder.com/400x200" alt="Tokyo">
+            <br>
+        </article>
+        <article>
+            <h3>3. Sydney, Australia</h3>
+            <p>Sydney is famous for its beaches, harbor, and iconic landmarks like the Sydney Opera House.</p>
+            <img src="https://via.placeholder.com/400x200" alt="Sydney">
+            <br>
+        </article>
+
+        <h3>Top 3 Destinations to Visit in 2024:</h3>
+        <ol>
+            <li>New York City, USA</li>
+            <li>Barcelona, Spain</li>
+            <li>Dubai, UAE</li>
+        </ol>
+
+        <hr>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips">
+        <h2>Travel Tips</h2>
+        <p><strong>Plan ahead:</strong> Make sure to research your destination and plan your itinerary ahead of time.</p>
+        <ul>
+            <li>Book flights early for better deals.</li>
+            <li>Learn basic phrases in the local language.</li>
+            <li>Pack light and avoid overpacking.</li>
+        </ul>
+
+        <h3>Must-Have Travel Items:</h3>
+        <ol>
+            <li>Portable charger</li>
+            <li>Travel pillow</li>
+            <li>Water bottle</li>
+        </ol>
+        <hr>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2>Travel Videos & Media</h2>
+        <h3>Top Travel Video:</h3>
+        <video width="320" height="240" controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+
+        <h3>Explore Japan - YouTube Video:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+        <hr>
+
+        <h3>Audio for Relaxation:</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Submit Your Feedback</h2>
+        <form class="review-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="feedback">Your Review:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            <br><br>
+
+            <button type="submit">Submit Review</button>
+        </form>
+        <hr>
+    </section>
+
+    <!-- Dropdown Menu -->
+    <section>
+        <h2>Explore More Destinations</h2>
+        <div class="dropdown">
+            <button class="dropdown-button">Select Category</button>
+            <div class="dropdown-content">
+                <a href="#destinations">Beaches</a>
+                <a href="#destinations">Mountains</a>
+                <a href="#destinations">City Tours</a>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Travel Adventure. All rights reserved.</p>
+    <a href="#top">Return to Top</a>
+</footer>
+
+</body>
+</html>
