@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery with Alert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        const photoSets = {
+            photo1: ["images/photo1.jpg", "images/photo1_alt.jpg"],
+            photo2: ["images/photo2.jpg", "images/photo2_alt.jpg"],
+            photo3: ["images/photo3.jpg", "images/photo3_alt.jpg"]
+        };
+
+        function changePhoto(element, type) {
+            const currentSrc = element.src.split('/').pop(); // Get the file name from src
+            const images = photoSets[type];
+            const nextIndex = (images.indexOf(currentSrc) + 1) % images.length;
+            element.src = `images/${images[nextIndex]}`;
+        }
+
+        function showAlert() {
+            alert("GOA BEST");
+        }
+    </script>
+</head>
+<body onclick="showAlert()">
+    <header>
+        <h1>Interactive Photo Gallery</h1>
+        <p>Click on the photos to change them, and anywhere else to see a message!</p>
+    </header>
+    <div class="gallery">
+        <img src="images/photo1.jpg" alt="Photo 1" onclick="changePhoto(this, 'photo1')">
+        <img src="images/photo2.jpg" alt="Photo 2" onclick="changePhoto(this, 'photo2')">
+        <img src="images/photo3.jpg" alt="Photo 3" onclick="changePhoto(this, 'photo3')">
+    </div>
+</body>
+</html>

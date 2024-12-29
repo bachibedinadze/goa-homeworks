@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .gallery div {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        const vegetableImages = {
+            tomato: ["images/tomato1.jpg", "images/tomato2.jpg", "images/tomato3.jpg"],
+            cucumber: ["images/cucumber1.jpg", "images/cucumber2.jpg", "images/cucumber3.jpg"],
+            carrot: ["images/carrot1.jpg", "images/carrot2.jpg", "images/carrot3.jpg"],
+            pepper: ["images/pepper1.jpg", "images/pepper2.jpg", "images/pepper3.jpg"]
+        };
+
+        function changeImage(element, type) {
+            const currentSrc = element.src;
+            const images = vegetableImages[type];
+            const currentIndex = images.indexOf(currentSrc.split('/').pop());
+            const nextIndex = (currentIndex + 1) % images.length;
+            element.src = images[nextIndex];
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Vegetable Store</h1>
+        <p>Click on the images to see more varieties!</p>
+    </header>
+    <div class="gallery">
+        <div onclick="changeImage(this.children[0], 'tomato')">
+            <img src="images/tomato1.jpg" alt="Tomato">
+        </div>
+        <div onclick="changeImage(this.children[0], 'cucumber')">
+            <img src="images/cucumber1.jpg" alt="Cucumber">
+        </div>
+        <div onclick="changeImage(this.children[0], 'carrot')">
+            <img src="images/carrot1.jpg" alt="Carrot">
+        </div>
+        <div onclick="changeImage(this.children[0], 'pepper')">
+            <img src="images/pepper1.jpg" alt="Pepper">
+        </div>
+    </div>
+</body>
+</html>

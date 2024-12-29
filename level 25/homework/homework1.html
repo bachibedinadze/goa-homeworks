@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Alert Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcccc;
+            padding: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        .clean-button {
+            background-color: #66ff66;
+        }
+
+        .clean-button:hover {
+            background-color: #009900;
+        }
+    </style>
+    <script>
+        function virusAlert() {
+            alert("Your computer is now filled with viruses!");
+        }
+
+        function cleanAlert() {
+            alert("All viruses have been cleaned from your computer!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the "Virus Alert" Site</h1>
+        <p>Click the buttons below, if you dare!</p>
+    </header>
+    <div class="button-container">
+        <!-- Generate many virus buttons -->
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <button onclick="virusAlert()">Click Me</button>
+        <!-- The one clean button -->
+        <button class="clean-button" onclick="cleanAlert()">Clean Viruses</button>
+    </div>
+</body>
+</html>
