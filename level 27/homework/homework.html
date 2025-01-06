@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inheritance Example</title>
+    <style>
+        /* Parent div style */
+        .parent {
+            color: blue; /* Inherited by child elements */
+        }
+
+        /* Override style for specific child */
+        .special {
+            color: red; /* Overrides the inherited color */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>This text inherits the color from the parent div (blue).</p>
+        <p>This text also inherits the color from the parent div (blue).</p>
+        <p class="special">This text overrides the inherited color and is red.</p>
+    </div>
+</body>
+</html>

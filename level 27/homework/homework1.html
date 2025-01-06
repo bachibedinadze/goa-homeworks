@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared and Specific Styles Example</title>
+    <style>
+        /* Shared styles for <p>, <h1>, and <button> */
+        p, h1, button {
+            font-family: Arial, sans-serif;
+            color: darkgreen;
+            margin: 10px 0;
+        }
+
+        /* Specific styles for <button> */
+        button {
+            background-color: lightgray;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Styled Page</h1>
+    <p>This is a paragraph sharing common styles.</p>
+    <p>Another paragraph with shared styles.</p>
+    <button>Click Me</button>
+</body>
+</html>
