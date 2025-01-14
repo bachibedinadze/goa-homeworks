@@ -1,0 +1,23 @@
+/* ID-ის სელექტორი */
+#main-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* კლასი სელექტორი */
+.content {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+    color: #333;
+}
+
+/* ელემენტის სელექტორი */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}

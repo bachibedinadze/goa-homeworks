@@ -1,0 +1,9 @@
+/* ID სელექტორი */
+#uniqueButton {
+    color: red; /* წითელი ფერი */
+}
+
+/* Class სელექტორი */
+.common-button {
+    color: blue; /* ლურჯი ფერი */
+}
