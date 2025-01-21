@@ -1,0 +1,18 @@
+/* Parent div styles */
+.parent-div {
+    width: 70%; /* 70% of screen width */
+    height: 600px; /* Fixed height */
+    background-color: #008080; /* Teal background */
+    margin: 0 auto; /* Center horizontally */
+    position: relative;
+}
+
+/* Child div styles */
+.child-div {
+    width: 25%; /* 25% of parent width */
+    height: 10%; /* 10% of parent height */
+    background-color: #FF4500; /* Orange Red background */
+    position: absolute;
+    top: 45%; /* Center vertically within parent */
+    left: 37.5%; /* Center horizontally within parent */
+}

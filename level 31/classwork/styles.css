@@ -1,0 +1,27 @@
+/* Common button styles */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Button 1 styles */
+.btn1 {
+    background-color: #FF5733; /* Bright Orange */
+    color: #FFFFFF; /* White Text */
+}
+
+/* Button 2 styles */
+.btn2 {
+    background-color: #33FF57; /* Bright Green */
+    color: #000000; /* Black Text */
+}
+
+/* Button 3 styles */
+.btn3 {
+    background-color: #3357FF; /* Bright Blue */
+    color: #FFFF00; /* Yellow Text */
+}
