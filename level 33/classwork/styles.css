@@ -1,0 +1,7 @@
+/* ფონტის იმპორტირება Google Fonts-იდან */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* ფონტის გამოყენება body თეგზე */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
