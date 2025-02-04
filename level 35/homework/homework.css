@@ -1,0 +1,48 @@
+/* 1. Set a custom link color */
+a {
+    color: #3498db; /* Custom color for the link */
+    text-decoration: none; /* 2. Remove the default underline */
+    font-weight: bold; /* 7. Make links bold */
+    font-style: italic; /* 8. Change the font style to italic */
+    text-transform: uppercase; /* 9. Convert text to uppercase */
+}
+
+/* 3. Add an underline on hover */
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #e74c3c; /* 4. Change the link color on hover */
+    background-color: rgba(0, 0, 0, 0.1); /* 6. Add a background color on hover */
+}
+
+/* 5. Style visited links */
+a:visited {
+    color: #9b59b6; /* Change color for visited links */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Optional: Makes the table span the full width */
+    border-collapse: collapse; /* 11. Merge table borders */
+}
+
+/* 10. Set border styles for table cells, rows, and the table */
+td, th {
+    border: 1px solid #ddd; /* Border for the cells */
+    padding: 8px; /* Add padding inside the cells */
+    text-align: left; /* Align text to the left */
+}
+
+/* 12. Use background-color to add color to headers */
+th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    font-weight: bold; /* Make header text bold */
+}
+
+/* 12. Apply background color to table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color for even rows */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Change row color on hover */
+}
