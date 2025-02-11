@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative List Design</title>
+    <style>
+        /* Remove default bullets */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Style each list item */
+        ul li {
+            padding: 12px 20px;
+            font-size: 18px;
+            position: relative;
+            margin: 8px 0;
+            border-radius: 8px;
+            transition: 0.3s;
+            background: #ffeeba;
+            border-left: 6px solid #ff9800;
+        }
+
+        /* Hover effect */
+        ul li:hover {
+            background: #ffcc80;
+        }
+
+        /* Every even list item with a different background */
+        ul li:nth-child(even) {
+            background: #d1e7dd;
+            border-left: 6px solid #198754;
+        }
+
+        /* Change text color of every third list item */
+        ul li:nth-child(3n) {
+            color: #6a0dad;
+            font-style: italic;
+        }
+
+        /* Custom emoji bullet point */
+        ul li::before {
+            content: "🔥";
+            position: absolute;
+            left: -25px;
+        }
+
+        /* First and last items bold */
+        ul li:first-child,
+        ul li:last-child {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Plan your day</li>
+        <li>Exercise for 30 minutes</li>
+        <li>Read a new book</li>
+        <li>Try a healthy recipe</li>
+        <li>Call a friend or family member</li>
+        <li>Work on a personal project</li>
+        <li>Reflect on the day and relax</li>
+    </ul>
+
+</body>
+</html>

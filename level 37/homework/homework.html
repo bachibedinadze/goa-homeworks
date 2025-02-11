@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled List</title>
+    <style>
+        ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        ul li {
+            padding: 10px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        ul li:nth-child(even) {
+            background-color: #f0f0f0; /* Style every even item with a different background */
+        }
+
+        ul li:nth-child(3n) {
+            color: darkblue; /* Change text color of every third item */
+        }
+
+        ul li::before {
+            content: "✅ "; /* Custom icon (emoji) as bullet */
+            position: absolute;
+            left: -25px;
+        }
+
+        ul li:first-child,
+        ul li:last-child {
+            font-weight: bold; /* Make first and last item bold */
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+        <li>Item Four</li>
+        <li>Item Five</li>
+        <li>Item Six</li>
+        <li>Item Seven</li>
+    </ul>
+
+</body>
+</html>
