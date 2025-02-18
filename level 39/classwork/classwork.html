@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Layout</title>
+    <style>
+        .container {
+            margin: 50px;
+            padding: 30px;
+            border: 2px dashed black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .border-box {
+            border: 5px solid black;
+            padding: 50px;
+            background-color: #fddc9b;
+        }
+        .padding-box {
+            padding: 50px;
+            background-color: #c4d79b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            width: 794px;
+            height: 160px;
+            background-color: #729fcf;
+            text-align: center;
+            line-height: 160px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="border-box">
+            <div class="padding-box">
+                <div class="content">794 × 160</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
