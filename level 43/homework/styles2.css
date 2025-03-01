@@ -1,0 +1,65 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Main container to hold all elements */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Layout of content section with 3 columns */
+  .content {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  
+  /* Sidebar and main content styling */
+  .left-sidebar, .right-sidebar {
+    width: 200px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .left-sidebar {
+    background-color: blue;
+  }
+  
+  .right-sidebar {
+    background-color: green;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: purple;
+    color: white;
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: pink;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }

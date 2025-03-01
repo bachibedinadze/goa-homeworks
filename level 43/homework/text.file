@@ -1,0 +1,34 @@
+1. display: flex;
+display: flex; გარდაქმნის კონტეინერს flex container-ად, რაც ნიშნავს, რომ შიგნით მყოფი ელემენტები ავტომატურად flex items გახდებიან და განლაგდებიან მთავარ ღერძზე.
+
+2. justify-content (მთავარი ღერძზე განლაგება)
+განსაზღვრავს, როგორ განლაგდეს ელემენტები main axis-ზე.
+მაგალითები:
+
+justify-content: flex-start; → მარცხენა მხარეს გაწევა
+justify-content: center; → ცენტრში
+justify-content: flex-end; → მარჯვენა მხარეს
+justify-content: space-between; → ელემენტებს შორის მაქსიმალური სივრცე
+justify-content: space-around; → ელემენტებს გარშემო სივრცეები
+
+
+3. align-items (ჯვარედინი ღერძზე განლაგება)
+განსაზღვრავს, როგორ განლაგდნენ ელემენტები cross axis-ზე (ვერტიკალურად, თუ flex-direction: row;).
+მაგალითები:
+
+align-items: flex-start; → ზედა მხარეს
+align-items: center; → ვერტიკალურად ცენტრში
+align-items: flex-end; → ქვედა მხარეს
+arduino
+Copy
+Edit
+
+
+4. flex-direction (ღერძის შეცვლა)
+განსაზღვრავს მთავარი ღერძის მიმართულებას.
+მაგალითები:
+
+flex-direction: row; (ნაგულისხმევი) → ელემენტები ჰორიზონტალურად
+flex-direction: column; → ელემენტები ვერტიკალურად
+flex-direction: row-reverse; → ჰორიზონტალური, მაგრამ შებრუნებული
+flex-direction: column-reverse; → ვერტიკალური, მაგრამ შებრუნებული

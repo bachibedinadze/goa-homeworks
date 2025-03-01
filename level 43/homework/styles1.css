@@ -1,0 +1,52 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Footer */
+.header, .footer {
+    background-color: #a3cd39;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    height: 60vh;
+}
+
+/* Article section */
+.article {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Sidebar container (Aside + Nav) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Aside section */
+.aside {
+    flex: 1;
+    background-color: #fcf8e3;
+    padding: 20px;
+}
+
+/* Nav section */
+.nav {
+    flex: 1;
+    background-color: #d9ead3;
+    padding: 20px;
+}

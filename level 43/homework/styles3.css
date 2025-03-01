@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header, .hero, .content, .sidebar, .footer {
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+    min-height: 100px; /* ეს ხაზს უსვამს მინიმალურ სიმაღლეს */
+}
+
+.header {
+    background-color: #00A5DF;
+}
+
+.hero {
+    background-color: #E55C25;
+}
+
+.content {
+    background-color: #66CC33;
+}
+
+.sidebar {
+    background-color: #6659C1;
+}
+
+.footer {
+    background-color: #333333;
+}
