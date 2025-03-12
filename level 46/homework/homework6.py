@@ -1,0 +1,1 @@
+long_words = [word for word in words if len(word) > 4]
