@@ -1,0 +1,108 @@
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .hover-button {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .hover-button:hover {
+        background-color: darkblue;
+    }
+    .hover-link {
+        color: blue;
+        transition: color 0.3s;
+    }
+    .hover-link:hover {
+        color: red;
+    }
+    .hover-image {
+        transition: transform 0.3s;
+    }
+    .hover-image:hover {
+        transform: scale(1.1);
+    }
+    .hover-text {
+        color: gray;
+        transition: color 0.3s;
+    }
+    .hover-text:hover {
+        color: purple;
+    }
+    .border-box {
+        width: 80px;
+        height: 80px;
+        border: 2px solid gray;
+        transition: border-width 0.3s;
+    }
+    .border-box:hover {
+        border-width: 4px;
+    }
+    .press-button {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: transform 0.1s;
+    }
+    .press-button:active {
+        transform: scale(0.95);
+    }
+    .opacity-box {
+        width: 80px;
+        height: 80px;
+        background-color: gray;
+        transition: opacity 0.3s;
+    }
+    .opacity-box:hover {
+        opacity: 0.5;
+    }
+    .padding-box {
+        background-color: yellow;
+        padding: 10px;
+        transition: padding 0.3s;
+    }
+    .padding-box:hover {
+        padding: 20px;
+    }
+    .rotate-icon {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        transition: transform 0.3s;
+    }
+    .rotate-icon:hover {
+        transform: rotate(12deg);
+    }
+    .shadow-card {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        box-shadow: 2px 2px 5px gray;
+        transition: box-shadow 0.3s;
+    }
+    .shadow-card:hover {
+        box-shadow: 5px 5px 15px gray;
+    }
+</style>
