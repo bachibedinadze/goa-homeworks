@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კამათლის გვერდები</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .dice-container {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 10px;
+        }
+        .dice {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .dice[data-value="1"] .dot { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .dice[data-value="2"] .dot:nth-child(1) { top: 20%; left: 20%; }
+        .dice[data-value="2"] .dot:nth-child(2) { bottom: 20%; right: 20%; }
+        .dice[data-value="3"] .dot:nth-child(1) { top: 20%; left: 20%; }
+        .dice[data-value="3"] .dot:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .dice[data-value="3"] .dot:nth-child(3) { bottom: 20%; right: 20%; }
+        .dice[data-value="4"] .dot:nth-child(1) { top: 20%; left: 20%; }
+        .dice[data-value="4"] .dot:nth-child(2) { top: 20%; right: 20%; }
+        .dice[data-value="4"] .dot:nth-child(3) { bottom: 20%; left: 20%; }
+        .dice[data-value="4"] .dot:nth-child(4) { bottom: 20%; right: 20%; }
+        .dice[data-value="5"] .dot:nth-child(1) { top: 20%; left: 20%; }
+        .dice[data-value="5"] .dot:nth-child(2) { top: 20%; right: 20%; }
+        .dice[data-value="5"] .dot:nth-child(3) { bottom: 20%; left: 20%; }
+        .dice[data-value="5"] .dot:nth-child(4) { bottom: 20%; right: 20%; }
+        .dice[data-value="5"] .dot:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .dice[data-value="6"] .dot:nth-child(1) { top: 20%; left: 20%; }
+        .dice[data-value="6"] .dot:nth-child(2) { top: 20%; right: 20%; }
+        .dice[data-value="6"] .dot:nth-child(3) { bottom: 20%; left: 20%; }
+        .dice[data-value="6"] .dot:nth-child(4) { bottom: 20%; right: 20%; }
+        .dice[data-value="6"] .dot:nth-child(5) { top: 50%; left: 20%; }
+        .dice[data-value="6"] .dot:nth-child(6) { top: 50%; right: 20%; }
+    </style>
+</head>
+<body>
+    <div class="dice-container">
+        <div class="dice" data-value="1"><div class="dot"></div></div>
+        <div class="dice" data-value="2"><div class="dot"></div><div class="dot"></div></div>
+        <div class="dice" data-value="3"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        <div class="dice" data-value="4"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        <div class="dice" data-value="5"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        <div class="dice" data-value="6"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    </div>
+</body>
+</html>
