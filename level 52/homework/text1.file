@@ -1,0 +1,49 @@
+1)
+def first_non_consecutive(arr):
+    for i in range(len(arr) - 1):
+        if arr[i] + 1 != arr[i + 1]:
+            return arr[i + 1]
+    return None
+
+
+2)
+def to_alternating_case(string):
+    return string.swapcase()
+
+
+3)
+def correct(s):
+    return s.replace("5", "S").replace("0", "O").replace("1", "I")
+
+
+4)
+def is_palindrome(s):
+    s = s.lower()  # Convert to lowercase to make it case insensitive
+    return s == s[::-1]  # Compare the string with its reverse
+
+
+5)
+def bonus_time(salary, bonus):
+    if bonus:
+        total = salary * 10
+    else:
+        total = salary
+    return f"${total}"
+
+6)
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10:
+        return 100
+    elif exam > 75 and projects >= 5:
+        return 90
+    elif exam > 50 and projects >= 2:
+        return 75
+    else:
+        return 0
+
+7)
+def sum_str(a, b):
+    # Convert empty strings to '0' before conversion
+    num_a = int(a) if a else 0
+    num_b = int(b) if b else 0
+    return str(num_a + num_b)
