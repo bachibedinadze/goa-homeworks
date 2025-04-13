@@ -1,0 +1,12 @@
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
+  
+  .box {
+    animation: slide 5s linear infinite;
+  }  

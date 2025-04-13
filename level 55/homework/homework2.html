@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article nav ads"
+        "footer footer footer";
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+      gap: 10px;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    .header {
+      grid-area: header;
+      background: gold;
+    }
+
+    .article {
+      grid-area: article;
+      background: gold;
+    }
+
+    .nav {
+      grid-area: nav;
+      background: gold;
+    }
+
+    .ads {
+      grid-area: ads;
+      background: gold;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: gold;
+    }
+
+    .grid-container > div {
+      padding: 10px;
+      font-weight: bold;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="article">Article</div>
+    <div class="nav">Nav</div>
+    <div class="ads">Ads</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>

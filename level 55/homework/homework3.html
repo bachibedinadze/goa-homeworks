@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto auto;
+      gap: 10px;
+      padding: 10px;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .item1 {
+      grid-column: span 3;
+      background: linear-gradient(to right, #f6d365, #fda085);
+    }
+
+    .item2 {
+      grid-column: span 4;
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    }
+
+    .item3, .item4 {
+      background: linear-gradient(to right, #43e97b, #38f9d7);
+    }
+
+    .item3 { grid-column: 4; grid-row: 1; }
+    .item4 { grid-column: 4; grid-row: 2; }
+
+    .item5, .item6, .item7, .item8, .item9 {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    }
+
+    .item5 { grid-column: 1; }
+    .item6 { grid-column: 2; }
+    .item7 { grid-column: 3; }
+    .item8 { grid-column: 4; }
+    .item9 { grid-column: 5; } /* თუ არსებობს */
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item3">3</div>
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item5">5</div>
+    <div class="grid-item item6">6</div>
+    <div class="grid-item item7">7</div>
+    <div class="grid-item item8">8</div>
+    <div class="grid-item item9">9</div>
+  </div>
+</body>
+</html>
