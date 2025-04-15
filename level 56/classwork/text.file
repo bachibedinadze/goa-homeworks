@@ -1,0 +1,15 @@
+#classwork 1
+
+def find_multiples(n, limit):
+    return [i for i in range(n, limit + 1, n)]
+
+
+#classwork 2
+
+def create_array(n):
+    res = []
+    i = 1
+    while i <= n:
+        res += [i]
+        i += 1  # This line was missing
+    return res
