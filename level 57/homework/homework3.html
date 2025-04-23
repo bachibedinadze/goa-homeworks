@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid‑Mosaic – image recreation</title>
+<style>
+/* =========  GLOBAL  ========= */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:system-ui,sans-serif}
+body{
+  background:#1b2a34;            /* same dark gaps you saw in the picture */
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* =========  GRID  ========= */
+.grid{
+  --size:120px;                  /* 1 square unit – change once, scale all  */
+  display:grid;
+  grid-template-columns:repeat(6,var(--size));
+  grid-auto-rows:var(--size);
+  gap:14px;
+  padding:14px;
+  background:#1b2a34;            /* lets the gaps look like thick borders   */
+}
+
+/* =========  GENERIC BOX ========= */
+.item{
+  position:relative;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+/* white diamond */
+.item::before{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  width:42px;height:42px;
+  background:#fff;
+  transform:translate(-50%,-50%) rotate(45deg);
+  border-radius:4px;
+}
+
+/* number on top of the diamond */
+.item::after{
+  content:attr(data-num);
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:14px;
+  font-weight:700;
+  color:#333;
+}
+
+/* =========  INDIVIDUAL PLACEMENT & COLORS ========= */
+.box1 {grid-column:2 / span 3; grid-row:1 / span 2;
+       background:linear-gradient(135deg,#ff7af7,#c9b8ff);}
+.box2 {grid-column:3 / span 2; grid-row:3 / span 2;
+       background:linear-gradient(135deg,#c9b8ff,#ff7af7);}
+.box3 {grid-column:5; grid-row:1;
+       background:linear-gradient(135deg,#91fdf0,#6dc0ff);}
+.box4 {grid-column:5; grid-row:2;
+       background:linear-gradient(135deg,#6dc0ff,#5d9bff);}
+
+.box5, .box6, .box7, .box8,
+.box9, .box10,
+.box11, .box12, .box13, .box14{
+       background:linear-gradient(135deg,#ff7fa7,#ffe99a);
+}
+
+/* left column */
+.box5{grid-column:1; grid-row:1;}
+.box6{grid-column:1; grid-row:2;}
+.box7{grid-column:1; grid-row:3;}
+.box8{grid-column:1; grid-row:4;}
+
+/* second column */
+.box9 {grid-column:2; grid-row:3;}
+.box10{grid-column:2; grid-row:4;}
+
+/* right‑hand small squares (two columns) */
+.box11{grid-column:5; grid-row:3;}
+.box12{grid-column:6; grid-row:3;}
+.box13{grid-column:5; grid-row:4;}
+.box14{grid-column:6; grid-row:4;}
+</style>
+</head>
+
+<body>
+  <section class="grid">
+    <div class="item box1"  data-num="1"></div>
+    <div class="item box2"  data-num="2"></div>
+    <div class="item box3"  data-num="3"></div>
+    <div class="item box4"  data-num="4"></div>
+
+    <div class="item box5"  data-num="5"></div>
+    <div class="item box6"  data-num="6"></div>
+    <div class="item box7"  data-num="7"></div>
+    <div class="item box8"  data-num="8"></div>
+
+    <div class="item box9"  data-num="9"></div>
+    <div class="item box10" data-num="10"></div>
+
+    <div class="item box11" data-num="11"></div>
+    <div class="item box12" data-num="12"></div>
+    <div class="item box13" data-num="13"></div>
+    <div class="item box14" data-num="14"></div>
+  </section>
+</body>
+</html>

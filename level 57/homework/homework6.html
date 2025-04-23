@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Profile Card</title>
+  <style>
+    /* Base Reset & Variables */
+    :root {
+      --card-bg: #fff;
+      --card-radius: 8px;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --primary-color: #4A90E2;
+      --text-color: #333;
+      --gap: 1rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Card Container */
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--gap);
+      max-width: 600px;
+      padding: var(--gap);
+    }
+
+    /* Profile Image */
+    .profile-card .avatar {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .profile-card .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Info Section */
+    .profile-card .info {
+      color: var(--text-color);
+    }
+    .profile-card .info h2 {
+      margin-bottom: 0.25em;
+    }
+    .profile-card .info p {
+      margin-bottom: 0.5em;
+      line-height: 1.4;
+    }
+    .profile-card .info .btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background: var(--primary-color);
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 600px) {
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-card .avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: var(--gap);
+      }
+      .profile-card .info .btn {
+        margin-top: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="profile-card">
+    <div class="avatar">
+      <img src="https://i.pravatar.cc/300" alt="Profile photo of Jane Doe">
+    </div>
+    <div class="info">
+      <h2>Jane Doe</h2>
+      <p><strong>Software Engineer</strong> at Acme Corp</p>
+      <p>👩‍💻 Passionate about building scalable web apps, open‑source lover, coffee addict.</p>
+      <a href="#" class="btn">Follow</a>
+    </div>
+  </section>
+
+</body>
+</html>
