@@ -1,0 +1,9 @@
+<!-- როდესაც სურათს დააკლიკებთ, მას უნდა შეეცვალოს src ატრიბუტის მნიშვნელობა-->
+
+<img id="myImage" src="old-image.jpg" onclick="changeImage()" width="200">
+
+<script>
+  function changeImage() {
+    document.getElementById("myImage").src = "new-image.jpg";
+  }
+</script>

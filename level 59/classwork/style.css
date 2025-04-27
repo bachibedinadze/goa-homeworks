@@ -1,0 +1,8 @@
+#box {
+    width: 300px;
+    height: 200px;
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    transition: width 0.5s;
+  }  
