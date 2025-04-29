@@ -1,0 +1,12 @@
+CLASSWORK
+
+1)def capitalize_word(word):
+    return word[0].upper() + word[1:]
+
+2)def stringy(size):
+    return ''.join('1' if i % 2 == 0 else '0' for i in range(size))
+
+3)def merge_arrays(arr1, arr2):
+    merged = arr1 + arr2
+    unique_sorted = sorted(set(merged))
+    return unique_sorted
