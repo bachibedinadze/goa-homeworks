@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Page</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">This is the header</div>
+  <p id="description">This is the description</p>
+  <h1 id="title">Original Title</h1>
+  <div id="greeting">Hello</div>
+  <p id="note">This note will be cleared</p>
+  <h2 id="heading">Heading Text</h2>
+  <div id="box">Box Content</div>
+  <p id="paragraph">This paragraph will change size</p>
+  <footer id="footer">Footer Content</footer>
+
+  <script>
+
+    const header = document.getElementById('header');
+    const description = document.getElementById('description');
+    const footerElement = document.getElementById('footer');
+    const titleText = document.getElementById('title').textContent;
+    document.getElementById('greeting').textContent = "Welcome!";
+    document.getElementById('note').textContent = "";
+    document.getElementById('heading').style.color = "red";
+    document.getElementById('box').style.backgroundColor = "yellow";
+    document.getElementById('paragraph').style.fontSize = "20px";
+
+    console.log({ header, description, footerElement, titleText });
+  </script>
+
+</body>
+</html>
