@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფორმა ინფუთით</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <input type="text" name="username" placeholder="შეიყვანე სახელი">
+    <button type="submit">გაგზავნა</button>
+  </form>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const inputValue = this.username.value;
+      alert(inputValue);
+    });
+  </script>
+
+</body>
+</html>
