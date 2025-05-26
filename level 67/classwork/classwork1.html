@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>userOperations ფუნქცია</title>
+</head>
+<body>
+  <h1>გახსენით კონსოლი შედეგების სანახავად</h1>
+
+  <script>
+    function userOperations() {
+      const response1 = confirm("გსურთ პირველი ოპერაციის შესრულება?");
+      const response2 = confirm("გსურთ მეორე ოპერაციის შესრულება?");
+
+      console.log("AND ოპერაციის შედეგი:", response1 && response2);
+      console.log("OR ოპერაციის შედეგი:", response1 || response2);
+    }
+
+    window.onload = userOperations;
+  </script>
+</body>
+</html>

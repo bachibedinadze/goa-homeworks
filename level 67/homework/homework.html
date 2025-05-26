@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tasks</title>
+</head>
+<body>
+  <h1>Open the Console to See Output</h1>
+  <script>
+    // 2-7: Working with Objects
+
+    // Create an empty object
+    let emptyObject = {};
+    console.log("Empty Object:", emptyObject);
+
+    // Create an object with your name, age, and city
+    let person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+    console.log("Person:", person);
+
+    // Access the value of a property in an object
+    console.log("Name:", person.name);
+
+    // Add a new property to an existing object
+    person.country = "USA";
+    console.log("Person with Country:", person);
+
+    // Create a nested object (an object inside another object)
+    let employee = {
+      id: 1,
+      details: {
+        name: "Alice",
+        department: "Engineering"
+      }
+    };
+    console.log("Employee:", employee);
+
+    // Change the value of an existing property in an object
+    employee.details.department = "Product";
+    console.log("Updated Employee Department:", employee);
+
+    // 8-11: Logical Operators
+
+    let a = 15;
+    let b = 20;
+
+    // Check if two numbers are both greater than 10
+    console.log("Both greater than 10:", a > 10 && b > 10);
+
+    // Check if at least one of two conditions is true
+    console.log("At least one true:", a > 10 || b < 10);
+
+    // Use the NOT operator to invert a boolean value
+    let isAvailable = true;
+    console.log("NOT isAvailable:", !isAvailable);
+
+    // Combine multiple logical operations in a single expression
+    let result = (a > 10 && b < 30) || !(b === 20);
+    console.log("Combined logic result:", result);
+
+    // 12-16: Type Conversion
+
+    // Convert a number to a string using String()
+    let num = 100;
+    let numStr = String(num);
+    console.log("Number to String:", numStr);
+
+    // Convert a boolean value to a string using String()
+    let bool = false;
+    let boolStr = String(bool);
+    console.log("Boolean to String:", boolStr);
+
+    // Convert a string containing a number to a number using Number()
+    let strNum = "42";
+    let actualNum = Number(strNum);
+    console.log("String to Number:", actualNum);
+
+    // Use Number() to convert a boolean to a number
+    console.log("true to Number:", Number(true));
+    console.log("false to Number:", Number(false));
+
+    // Check what happens when you use Number() on a non-numeric string
+    console.log("Non-numeric to Number:", Number("hello"));
+  </script>
+</body>
+</html>
