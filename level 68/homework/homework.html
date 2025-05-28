@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Conditions Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    input {
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 2: Check if a Number is Positive or Negative -->
+  <h2>2) Check if a Number is Positive or Negative</h2>
+  <input type="number" id="checkNumber" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+  <p id="numberResult"></p>
+
+  <!-- Task 3: Check User’s Age for Voting Eligibility -->
+  <h2>3) Check Voting Eligibility</h2>
+  <input type="number" id="userAge" placeholder="Enter your age">
+  <button onclick="checkVoting()">Check Eligibility</button>
+  <p id="votingResult"></p>
+
+  <!-- Task 4: Compare Two Numbers -->
+  <h2>4) Compare Two Numbers</h2>
+  <input type="number" id="compNum1" placeholder="Enter first number">
+  <input type="number" id="compNum2" placeholder="Enter second number">
+  <button onclick="compareTwoNums()">Compare</button>
+  <p id="compareResult"></p>
+
+  <script>
+    // Task 2
+    function checkNumber() {
+      const num = Number(document.getElementById('checkNumber').value);
+      const result = document.getElementById('numberResult');
+
+      if (num > 0) {
+        result.textContent = "The number is positive.";
+      } else if (num < 0) {
+        result.textContent = "The number is negative.";
+      } else {
+        result.textContent = "The number is zero.";
+      }
+    }
+
+    // Task 3
+    function checkVoting() {
+      const age = Number(document.getElementById('userAge').value);
+      const result = document.getElementById('votingResult');
+
+      if (age >= 18) {
+        result.textContent = "You can vote!";
+      } else {
+        result.textContent = "You are not eligible to vote.";
+      }
+    }
+
+    // Task 4
+    function compareTwoNums() {
+      const num1 = Number(document.getElementById('compNum1').value);
+      const num2 = Number(document.getElementById('compNum2').value);
+      const result = document.getElementById('compareResult');
+
+      if (num1 > num2) {
+        result.textContent = `${num1} is greater than ${num2}`;
+      } else if (num2 > num1) {
+        result.textContent = `${num2} is greater than ${num1}`;
+      } else {
+        result.textContent = "Both numbers are equal.";
+      }
+    }
+  </script>
+
+</body>
+</html>
