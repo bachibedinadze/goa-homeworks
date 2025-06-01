@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Discount Checker</title>
+  <script>
+    function discountFunc() {
+      let age = prompt("შეიყვანეთ თქვენი ასაკი:");
+      age = parseInt(age);
+
+      if (isNaN(age)) {
+        alert("გთხოვთ, სწორად შეიყვანოთ ასაკი!");
+      } else if (age < 18) {
+        alert("თქვენი ფასდაკლებაა: 20%");
+      } else if (age >= 18 && age < 65) {
+        alert("თქვენი ფასდაკლებაა: 5%");
+      } else {
+        alert("თქვენი ფასდაკლებაა: 10%");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h2>ფასდაკლების შემოწმება</h2>
+  <button onclick="discountFunc()">შეამოწმე ფასდაკლება</button>
+
+</body>
+</html>
