@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tasks</title>
+  <style>
+    #colorDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 10px;
+    }
+    #hideDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightgreen;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="heading">Click buttons to see actions</h2>
+  <p id="myParagraph">Original text</p>
+
+  <div id="colorDiv">Color Div</div>
+  <div id="hideDiv">Hide Me</div>
+
+  <button onclick="changeText()">Change Paragraph Text</button>
+  <button onclick="changeBackground()">Change Background Color</button>
+  <button onclick="changeFontSize()">Change Font Size</button>
+  <button onclick="hideDiv()">Hide Div</button>
+  <button onclick="showAlert()">Show Alert</button>
+
+  <hr>
+
+  <h3>Console Outputs</h3>
+  <p>Check your browser console for loop outputs</p>
+
+  <script>
+    // 1. Print numbers from 1 to 10 using a for loop
+    console.log("Numbers from 1 to 10:");
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+    }
+
+    // 2. Print even numbers from 2 to 20 using a while loop
+    console.log("Even numbers from 2 to 20:");
+    let even = 2;
+    while (even <= 20) {
+      console.log(even);
+      even += 2;
+    }
+
+    // 3. Print numbers from 10 down to 1 using a for loop
+    console.log("Numbers from 10 to 1:");
+    for (let i = 10; i >= 1; i--) {
+      console.log(i);
+    }
+
+    // 4. Print the first 5 multiples of 3 using a while loop
+    console.log("First 5 multiples of 3:");
+    let count = 1;
+    while (count <= 5) {
+      console.log(count * 3);
+      count++;
+    }
+
+    // 5. Print each character of a string using a for loop
+    let myString = "Hello";
+    console.log("Characters in the string:");
+    for (let i = 0; i < myString.length; i++) {
+      console.log(myString[i]);
+    }
+
+    // 6. Change the text content of a paragraph
+    function changeText() {
+      document.getElementById("myParagraph").textContent = "Text has been changed!";
+    }
+
+    // 7. Change the background color of a div
+    function changeBackground() {
+      document.getElementById("colorDiv").style.backgroundColor = "orange";
+    }
+
+    // 8. Change the font size of a heading
+    function changeFontSize() {
+      document.getElementById("heading").style.fontSize = "32px";
+    }
+
+    // 9. Hide a div
+    function hideDiv() {
+      document.getElementById("hideDiv").style.display = "none";
+    }
+
+    // 10. Show an alert with a custom message
+    function showAlert() {
+      alert("This is a custom alert message!");
+    }
+  </script>
+
+</body>
+</html>

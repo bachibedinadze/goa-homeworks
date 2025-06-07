@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>User Loop</title>
+  <script>
+    function userLoop() {
+      let num1 = Number(prompt("შეიყვანეთ პირველი რიცხვი:"));
+      let num2 = Number(prompt("შეიყვანეთ მეორე რიცხვი:"));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        console.log("გთხოვთ შეიყვანოთ მხოლოდ რიცხვები.");
+        return;
+      }
+
+      for (let i = num1; i <= num2; i++) {
+        console.log(i);
+      }
+    }
+
+    window.onload = userLoop;
+  </script>
+</head>
+<body>
+</body>
+</html>
