@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Tasks</title>
+</head>
+<body>
+
+  <div id="container"></div>
+  <div id="content">
+    <p>Old paragraph</p>
+    <button>Old button</button>
+  </div>
+
+  <div id="textContainer">
+    <p>Original paragraph</p>
+  </div>
+
+  <ul id="singleItemList">
+    <li>Single item</li>
+  </ul>
+
+  <h2 id="headingToReplace">Old Heading</h2>
+
+  <script>
+    // 2. Create a new <p> element and add it to the body
+    const p = document.createElement("p");
+    p.textContent = "This is a paragraph";
+    document.body.appendChild(p);
+
+    // 3. Create an <h1> and append to a <div>
+    const h1 = document.createElement("h1");
+    h1.textContent = "This is a heading";
+    const div = document.getElementById("container");
+    div.appendChild(h1);
+
+    // 4. Create an <img> and add to the page
+    const img = document.createElement("img");
+    img.src = "https://via.placeholder.com/150";
+    document.body.appendChild(img);
+
+    // 5. Create a <button> and add it to the body
+    const button = document.createElement("button");
+    button.textContent = "Click me";
+    document.body.appendChild(button);
+
+    // 6. Create a <ul> with three <li> items
+    const ul = document.createElement("ul");
+    const li1 = document.createElement("li");
+    li1.textContent = "Item 1";
+    const li2 = document.createElement("li");
+    li2.textContent = "Item 2";
+    const li3 = document.createElement("li");
+    li3.textContent = "Item 3";
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    document.body.appendChild(ul);
+
+    // 7. Remove first child from #content
+    const contentDiv = document.getElementById("content");
+    contentDiv.removeChild(contentDiv.firstElementChild);
+
+    // 8. Create <ul> with 3 items and remove last
+    const list = document.createElement("ul");
+    const l1 = document.createElement("li");
+    l1.textContent = "One";
+    const l2 = document.createElement("li");
+    l2.textContent = "Two";
+    const l3 = document.createElement("li");
+    l3.textContent = "Three";
+    list.appendChild(l1);
+    list.appendChild(l2);
+    list.appendChild(l3);
+    document.body.appendChild(list);
+    list.removeChild(list.lastElementChild);
+
+    // 9. Replace <p> inside #textContainer
+    const textContainer = document.getElementById("textContainer");
+    const newP = document.createElement("p");
+    newP.textContent = "This is the new paragraph";
+    const oldP = textContainer.querySelector("p");
+    textContainer.replaceChild(newP, oldP);
+
+    // 10. Replace <button> in #content with <span>
+    const newSpan = document.createElement("span");
+    newSpan.textContent = "New Span";
+    const oldButton = contentDiv.querySelector("button");
+    contentDiv.replaceChild(newSpan, oldButton);
+
+    // 11. Replace <li> in a <ul> with new <li>
+    const singleItemList = document.getElementById("singleItemList");
+    const oldLi = singleItemList.querySelector("li");
+    const newLi = document.createElement("li");
+    newLi.textContent = "Replaced item";
+    singleItemList.replaceChild(newLi, oldLi);
+
+    // 12. Replace <h2> with <h1>
+    const oldH2 = document.getElementById("headingToReplace");
+    const newH1 = document.createElement("h1");
+    newH1.textContent = "Replaced H1 Heading";
+    document.body.replaceChild(newH1, oldH2);
+  </script>
+
+</body>
+</html>
