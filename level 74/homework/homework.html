@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Listener Examples</title>
+  <style>
+    #toggleDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+    }
+
+    #myImage {
+      width: 200px;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Click Alert -->
+  <button id="alertButton">Click Me</button>
+
+  <!-- 2. Change Text on Hover -->
+  <p id="hoverParagraph">Hover over me!</p>
+
+  <!-- 3. Toggle Background Color -->
+  <div id="toggleDiv">Click to toggle background</div>
+
+  <!-- 4. Log Input Value on Click -->
+  <input type="text" id="textInput" placeholder="Click me and check console">
+
+  <!-- 5. Show/Hide Image on Button Click -->
+  <button id="toggleImageButton">Show/Hide Image</button>
+  <img id="myImage" src="https://via.placeholder.com/200" alt="Example Image">
+
+  <script>
+    // 1. Click Alert
+    document.getElementById('alertButton').addEventListener('click', function() {
+      alert('Button was clicked!');
+    });
+
+    // 2. Change Text on Hover
+    const paragraph = document.getElementById('hoverParagraph');
+    paragraph.addEventListener('mouseover', function() {
+      paragraph.textContent = 'Text changed!';
+    });
+
+    // 3. Toggle Background Color
+    const toggleDiv = document.getElementById('toggleDiv');
+    let isBlue = true;
+    toggleDiv.addEventListener('click', function() {
+      toggleDiv.style.backgroundColor = isBlue ? 'lightgreen' : 'lightblue';
+      isBlue = !isBlue;
+    });
+
+    // 4. Log Input Value on Click
+    const input = document.getElementById('textInput');
+    input.addEventListener('click', function() {
+      console.log('Input value:', input.value);
+    });
+
+    // 5. Show/Hide Image on Button Click
+    const toggleImageButton = document.getElementById('toggleImageButton');
+    const image = document.getElementById('myImage');
+    toggleImageButton.addEventListener('click', function() {
+      if (image.style.display === 'none') {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
