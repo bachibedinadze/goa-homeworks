@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ინტერვალის გაჩერება</title>
+</head>
+<body>
+  <button id="stopButton">შეწყვიტე ინტერვალი</button>
+
+  <script>
+    // ინტერვალი ყოველ 10 წამში
+    function printName() {
+      console.log("გიორგი გაბედავა"); // ჩასვით თქვენი სახელი და გვარი
+    }
+
+    let myInterval = setInterval(printName, 10000); // 10000 მილიწამი = 10 წამი
+
+    // ღილაკზე დაჭერისას გაჩერება
+    document.getElementById("stopButton").addEventListener("click", function() {
+      clearInterval(myInterval);
+      console.log("ინტერვალი გაჩერდა");
+    });
+  </script>
+</body>
+</html>
