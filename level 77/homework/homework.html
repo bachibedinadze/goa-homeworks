@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tasks</title>
+  <style>
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    // 1. Countdown Timer
+    let count = 10;
+    const countdown = setInterval(function() {
+      console.log(count);
+      if (count === 0) {
+        clearInterval(countdown);
+        console.log("Time's up!");
+      }
+      count--;
+    }, 1000);
+
+    // 2. Flashing Title
+    let titleState = true;
+    let titleIntervalCount = 0;
+    const titleInterval = setInterval(function() {
+      document.title = titleState ? "Hello" : "Goodbye";
+      titleState = !titleState;
+      titleIntervalCount++;
+      if (titleIntervalCount >= 6) {
+        clearInterval(titleInterval);
+      }
+    }, 1000);
+
+    // 3. Move a Box
+    const box = document.getElementById("box");
+    let position = 0;
+    const moveBox = setInterval(function() {
+      position += 10;
+      box.style.left = position + "px";
+      if (position >= 100) {
+        clearInterval(moveBox);
+      }
+    }, 200);
+
+    // 4. Random Number Logger
+    let randomCount = 0;
+    const randomInterval = setInterval(function() {
+      const randNum = Math.floor(Math.random() * 10) + 1;
+      console.log(randNum);
+      randomCount++;
+      if (randomCount >= 5) {
+        clearInterval(randomInterval);
+      }
+    }, 1500);
+
+    // 5. Array to Uppercase
+    const strArray = ["cat", "dog", "bird"];
+    for (let i = 0; i < strArray.length; i++) {
+      console.log(strArray[i].toUpperCase());
+    }
+
+    // 6. Replace Middle Element
+    const numArray = [1, 2, 3];
+    numArray[1] = 0;
+    console.log(numArray);
+
+    // 7. Add and Remove Elements
+    let arr = ["first", "second"];
+    arr.push("third");
+    arr.unshift("zero");
+    arr.pop();
+    console.log(arr);
+
+    // 8. Average of Array
+    const numbers = [4, 8, 15, 23];
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    const avg = sum / numbers.length;
+    console.log("Average:", avg);
+
+    // 9. Reverse an Array Manually
+    const manualArray = ["one", "two", "three"];
+    console.log(manualArray[2]);
+    console.log(manualArray[1]);
+    console.log(manualArray[0]);
+
+    // 10. Loop with Index
+    const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+    for (let i = 0; i < fruits.length; i++) {
+      console.log("Index " + i + ": " + fruits[i]);
+    }
+  </script>
+</body>
+</html>

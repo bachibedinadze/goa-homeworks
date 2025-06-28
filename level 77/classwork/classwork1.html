@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array + Interval Example</title>
+</head>
+<body>
+  <script>
+    let myArray = ["A", "B", "C", "D"];
+
+    const interval = setInterval(function() {
+      for (let i = 0; i < myArray.length; i++) {
+        console.log(myArray[i]);
+      }
+      console.log("----");
+    }, 1000);
+
+    // ინტერვალის გარეთ ვცვლით სიის ყველა ელემენტის მნიშვნელობას
+    for (let i = 0; i < myArray.length; i++) {
+      myArray[i] = myArray[i] + "_changed";
+    }
+
+    // ინტერვალი 5 წამში შეწყდება
+    setTimeout(function() {
+      clearInterval(interval);
+      console.log("Interval stopped.");
+    }, 5000);
+  </script>
+</body>
+</html>
