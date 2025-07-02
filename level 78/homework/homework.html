@@ -1,0 +1,78 @@
+// 2-6
+
+// 2) Select all <p> tags and alert total count
+const pTags = document.querySelectorAll('p');
+alert(`Total <p> tags: ${pTags.length}`);
+
+// 3) Change text color of all <h2> elements to blue
+const h2Elements = document.querySelectorAll('h2');
+h2Elements.forEach(h2 => {
+  h2.style.color = 'blue';
+});
+
+// 4) Retrieve all <li> elements and log their text content
+const liElements = document.querySelectorAll('li');
+liElements.forEach(li => {
+  console.log(li.textContent);
+});
+
+// 5) Select all <div> elements and set background to lightgray
+const divElements = document.querySelectorAll('div');
+divElements.forEach(div => {
+  div.style.backgroundColor = 'lightgray';
+});
+
+// 6) Find the first <img> and change src attribute
+const firstImg = document.querySelector('img');
+if (firstImg) {
+  firstImg.src = 'https://example.com/new-image.jpg';  // Replace with your desired URL
+}
+
+
+// 7-11
+
+// 7) Select all elements with class "highlight" and set background to yellow
+const highlights = document.querySelectorAll('.highlight');
+highlights.forEach(el => {
+  el.style.backgroundColor = 'yellow';
+});
+
+// 8) Count elements with class "card" and log number
+const cards = document.querySelectorAll('.card');
+console.log(`Number of elements with class "card": ${cards.length}`);
+
+// 9) Select all elements with class "error" and change text color to red
+const errors = document.querySelectorAll('.error');
+errors.forEach(el => {
+  el.style.color = 'red';
+});
+
+// 10) Retrieve all elements with class "item" and log their innerHTML
+const items = document.querySelectorAll('.item');
+items.forEach(el => {
+  console.log(el.innerHTML);
+});
+
+// 11) Select first element with class "button" and change its text to "Clicked!"
+const firstButton = document.querySelector('.button');
+if (firstButton) {
+  firstButton.textContent = 'Clicked!';
+}
+
+
+// 12)
+
+// Move a <div> element 5px right every 100ms smoothly
+// Assuming you want to move the first <div> on the page
+
+const movingDiv = document.querySelector('div');
+if (movingDiv) {
+  let position = 0;
+  // Ensure position relative for smooth movement
+  movingDiv.style.position = 'relative';
+
+  setInterval(() => {
+    position += 5;
+    movingDiv.style.left = position + 'px';
+  }, 100);
+}

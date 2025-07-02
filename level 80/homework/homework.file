@@ -1,0 +1,33 @@
+#1 def solution(nums):
+    if not nums:
+        return []
+    return sorted(nums)
+
+
+#2 def stray(numbers):
+    if numbers[0] != numbers[1] and numbers[0] != numbers[2]:
+        return numbers[0]
+    for num in numbers:
+        if num != numbers[0]:
+            return num
+
+
+#3 def arithmetic(a, b, operator):
+    if operator == "add":
+        return a + b
+    elif operator == "subtract":
+        return a - b
+    elif operator == "multiply":
+        return a * b
+    elif operator == "divide":
+        return a / b
+
+
+#4 def break_chocolate(n, m):
+    if n <= 0 or m <= 0:
+        return 0
+    return n * m - 1
+
+
+#5def is_anagram(str1, str2):
+    return sorted(str1.lower()) == sorted(str2.lower())
