@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Tasks</title>
+</head>
+<body>
+  <script>
+    // 4-8: Use of "break"
+
+    // 1. Print numbers 1 to 20, but stop at 13
+    for (let i = 1; i <= 20; i++) {
+      if (i === 13) break;
+      console.log(i);
+    }
+
+    // 2. Loop through colors, stop at "blue"
+    let colors = ["red", "green", "yellow", "blue", "purple"];
+    for (let color of colors) {
+      if (color === "blue") break;
+      console.log(color);
+    }
+
+    // 3. Count from 1 to 50, stop if divisible by 4 and 5
+    for (let i = 1; i <= 50; i++) {
+      if (i % 4 === 0 && i % 5 === 0) break;
+      console.log(i);
+    }
+
+    // 4. Print letters in word, stop at "a"
+    let word = "javascript";
+    for (let letter of word) {
+      if (letter === "a") break;
+      console.log(letter);
+    }
+
+    // 5. Keep adding numbers from 1, stop when sum reaches 100
+    let sum = 0;
+    let num = 1;
+    while (true) {
+      sum += num;
+      if (sum >= 100) break;
+      num++;
+    }
+    console.log("Total sum:", sum);
+
+    // 9–13: Use of "continue"
+
+    // 1. Print numbers 1–20, skip 13
+    for (let i = 1; i <= 20; i++) {
+      if (i === 13) continue;
+      console.log(i);
+    }
+
+    // 2. Loop through fruits, skip "banana"
+    let fruits = ["apple", "banana", "orange", "grape"];
+    for (let fruit of fruits) {
+      if (fruit === "banana") continue;
+      console.log(fruit);
+    }
+
+    // 3. Count from 1–30, skip numbers divisible by 3
+    for (let i = 1; i <= 30; i++) {
+      if (i % 3 === 0) continue;
+      console.log(i);
+    }
+
+    // 4. Print letters in word, skip "e"
+    let anotherWord = "developer";
+    for (let char of anotherWord) {
+      if (char === "e") continue;
+      console.log(char);
+    }
+
+    // 5. Loop 1–50, skip even numbers
+    for (let i = 1; i <= 50; i++) {
+      if (i % 2 === 0) continue;
+      console.log(i);
+    }
+
+    // 14–18: Arrow functions
+
+    // 1. Add two numbers
+    const add = (a, b) => a + b;
+    console.log(add(5, 3));
+
+    // 2. Greeting with name
+    const greet = name => `Hello, ${name}!`;
+    console.log(greet("John"));
+
+    // 3. Double array values
+    const doubleArray = arr => arr.map(n => n * 2);
+    console.log(doubleArray([1, 2, 3]));
+
+    // 4. Check if even
+    const isEven = num => num % 2 === 0;
+    console.log(isEven(4)); // true
+
+    // 5. Get string length
+    const getLength = str => str.length;
+    console.log(getLength("JavaScript"));
+  </script>
+</body>
+</html>
