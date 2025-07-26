@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: hsl(221, 100%, 96%);
+            font-family: "Hanken Grotesk", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        .Result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+            width: 300px;
+            height: 400px;
+            border-radius: 5%;
+            text-align: center;
+        }
+
+        .Result h3 {
+            color: hsl(241, 100%, 89%);
+            margin-bottom: 20px;
+        }
+
+        .Score {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            color: hsl(241, 100%, 89%);
+            background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        }
+
+        .Score b {
+            font-size: xx-large;
+            color: white;
+        }
+
+        .DetailedSummary {
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: hsl(241, 100%, 89%);
+            margin-top: 20px;
+        }
+
+        .DetailedSummary b {
+            font-size: x-large;
+            color: white;
+        }
+
+        .Summary {
+            background-color: white;
+            width: 300px;
+            height: 400px;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .Summary h3 {
+            margin-top: 0;
+        }
+
+        .SummaryDetailed {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .Reaction, .Memory, .Verbal, .Visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            border-radius: 10px;
+            height: 40px;
+            width: 190px;
+            padding: 0 10px;
+        }
+
+        .Reaction {
+            background-color: hsla(0, 100%, 67%, 0.3);
+        }
+
+        .Memory {
+            background-color: hsla(39, 100%, 56%, 0.3);
+        }
+
+        .Verbal {
+            background-color: hsla(166, 100%, 37%, 0.3);
+        }
+
+        .Visual {
+            background-color: hsla(234, 85%, 45%, 0.3);
+        }
+
+        .ImgText {
+            display: flex;
+            gap: 5px;
+            width: 60px;
+            align-items: center;
+        }
+
+        button {
+            width: 90%;
+            max-width: 200px;
+            height: 40px;
+            background-color: hsl(224, 30%, 27%);
+            border-radius: 15px;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            cursor: grab;
+            background: linear-gradient(to top, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .Main {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .Result, .Summary {
+                width: 90%;
+                height: auto;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            .Score {
+                width: 100px;
+                height: 100px;
+            }
+
+            .Score b {
+                font-size: x-large;
+            }
+
+            .DetailedSummary {
+                width: 80%;
+                text-align: center;
+            }
+
+            .SummaryDetailed {
+                width: 100%;
+                align-items: center;
+            }
+
+            .Reaction, .Memory, .Verbal, .Visual {
+                width: 90%;
+                gap: 20px;
+                justify-content: space-between;
+                padding: 0 10px;
+            }
+
+            button {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Score {
+                width: 80px;
+                height: 80px;
+            }
+
+            .Score b {
+                font-size: large;
+            }
+
+            .DetailedSummary b {
+                font-size: large;
+            }
+
+            .Result h3, .DetailedSummary {
+                font-size: 14px;
+            }
+
+            .Reaction, .Memory, .Verbal, .Visual {
+                gap: 15px;
+            }
+
+            button {
+                font-size: 14px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="Result">
+            <h3>Your Result</h3>
+            <p class="Score">
+                <b>76</b>
+                of 100
+            </p>
+            <p class="DetailedSummary">
+                <b>Great</b> <br>
+                You scored higher than 65% of the people who have taken these tests.
+            </p>
+        </div>
+        <div class="Summary">
+            <h3>Summary</h3>
+            <div class="SummaryDetailed">
+                <div class="Reaction">
+                    <div class="ImgText">
+                        <img src="Reaction.svg" alt="Reaction" />
+                        <p>Reaction</p>
+                    </div>
+                    <p><b>80</b> / 100</p>
+                </div>
+
+                <div class="Memory">
+                    <div class="ImgText">
+                        <img src="Memory.svg" alt="Memory" />
+                        <p>Memory</p>
+                    </div>
+                    <p><b>92</b> / 100</p>
+                </div>
+
+                <div class="Verbal">
+                    <div class="ImgText">
+                        <img src="Verbal.svg" alt="Verbal" />
+                        <p>Verbal</p>
+                    </div>
+                    <p><b>61</b> / 100</p>
+                </div>
+
+                <div class="Visual">
+                    <div class="ImgText">
+                        <img src="Visual.svg" alt="Visual" />
+                        <p>Visual</p>
+                    </div>
+                    <p><b>73</b> / 100</p>
+                </div>
+            </div>
+            <button>Continue</button>
+        </div>
+    </div>
+</body>
+</html>
