@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+.testimonial-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Top Section */
+.top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.text-box h2 {
+  color: #512150;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-box p {
+  color: #666;
+  font-size: 16px;
+  max-width: 480px;
+  margin: 0;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f3eefc;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  min-width: 300px;
+}
+
+.rating-box .stars {
+  color: #fbbf24;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rating-box p {
+  margin: 0;
+  font-weight: 600;
+  color: #512150;
+  font-size: 14px;
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #512150;
+  color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.user h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user span {
+  font-size: 13px;
+  color: #d1b7f2;
+}
+
+.review {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .top-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ratings {
+    align-items: flex-end;
+  }
+
+  .testimonials {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 32%;
+  }
+
+  .text-box h2 {
+    font-size: 42px;
+  }
+
+  .text-box p {
+    font-size: 17px;
+  }
+}
