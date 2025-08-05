@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Extensions Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="homework.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="icon.svg.png" alt="Extensions" />
+        <span>Extensions</span>
+      </div>
+      <div class="search-settings">
+        <input type="text" placeholder="Search extensions..." />
+        <button class="settings-btn">⚙️</button>
+      </div>
+    </header>
+
+    <section class="filters">
+      <h2>Extensions List</h2>
+      <div class="filter-buttons">
+        <button class="active">All</button>
+        <button>Active</button>
+        <button>Inactive</button>
+      </div>
+    </section>
+
+    <main class="extensions-grid">
+        <div class="card">
+        <div class="icon" style="background-color: #374151">📷</div>
+        <div class="info">
+          <h3>DevLens</h3>
+          <p>Quickly inspect page layouts and visualize element boundaries.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #1e293b">🔍</div>
+        <div class="info">
+          <h3>StyleSpy</h3>
+          <p>Instantly analyze and copy CSS from any webpage element.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #fecaca">⚡</div>
+        <div class="info">
+          <h3>SpeedBoost</h3>
+          <p>Optimizes browser resource usage to accelerate page loading.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #fbcfe8">🔧</div>
+        <div class="info">
+          <h3>JSONWizard</h3>
+          <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #c4b5fd">📂</div>
+        <div class="info">
+          <h3>TabMaster Pro</h3>
+          <p>Organizes browser tabs into groups and sessions.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #e0e7ff">🖥️</div>
+        <div class="info">
+          <h3>ViewportBuddy</h3>
+          <p>Simulates various screen resolutions directly within the browser.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #a5f3fc">📝</div>
+        <div class="info">
+          <h3>Markup Notes</h3>
+          <p>Enables annotation and notes directly onto webpages.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #dbeafe">📐</div>
+        <div class="info">
+          <h3>GridGuides</h3>
+          <p>Overlay customizable grids and alignment guides on any webpage.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #a7f3d0">🎨</div>
+        <div class="info">
+          <h3>Palette Picker</h3>
+          <p>Extracts color palettes from any webpage instantly.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #fcd34d">🔗</div>
+        <div class="info">
+          <h3>LinkChecker</h3>
+          <p>Scans and highlights broken links on any page.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #bae6fd">📸</div>
+        <div class="info">
+          <h3>DOM Snapshot</h3>
+          <p>Capture and export DOM structures quickly.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="icon" style="background-color: #86efac">📊</div>
+        <div class="info">
+          <h3>ConsolePlus</h3>
+          <p>Enhanced developer console with advanced filtering and logging.</p>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
