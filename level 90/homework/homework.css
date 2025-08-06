@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0f1424;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.profile {
+  background-color: #5746ea;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row: span 2;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #bbc0ff;
+}
+
+.profile h1 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.profile nav {
+  margin-top: 30px;
+}
+
+.profile nav a {
+  display: block;
+  text-decoration: none;
+  color: #bbc0ff;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.profile nav a:hover,
+.profile nav a.active {
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  background-color: #1c1f4a;
+  border-radius: 15px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.work::before { background-color: #ff8b64; }
+.play::before { background-color: #55c2e6; }
+.study::before { background-color: #ff5e7d; }
+.exercise::before { background-color: #4bcf83; }
+.social::before { background-color: #7335d2; }
+.selfcare::before { background-color: #f1c65b; }
+
+.card-content {
+  margin-top: 50px;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.card-content h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.card-content p {
+  font-size: 12px;
+  color: #bbc0ff;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .profile {
+    grid-row: auto;
+  }
+}
