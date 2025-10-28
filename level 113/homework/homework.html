@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theme Preference</title>
+  <style>
+    body.light { background: #fff; color: #000; }
+    body.dark { background: #222; color: #fff; }
+    button { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Theme Preference Example</h1>
+  <button id="toggleTheme">Toggle Theme</button>
+
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById('toggleTheme');
+
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.className = savedTheme;
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+      body.className = newTheme;
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>

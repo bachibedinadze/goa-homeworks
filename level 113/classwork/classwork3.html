@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>localStorage მაგალითი</title>
+</head>
+<body>
+  <p id="output"></p>
+  <button id="addWordBtn">შეიყვანე სიტყვა</button>
+
+  <script>
+    const output = document.getElementById('output');
+    const addWordBtn = document.getElementById('addWordBtn');
+
+    const savedWord = localStorage.getItem('myWord');
+    if (savedWord) {
+      output.textContent = savedWord;
+    }
+
+    addWordBtn.addEventListener('click', () => {
+      const word = prompt('შეიყვანე ნებისმიერი სიტყვა:');
+      if (word) {
+        localStorage.setItem('myWord', word);
+        output.textContent = word;
+      }
+    });
+  </script>
+</body>
+</html>

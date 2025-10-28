@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Autosave</title>
+</head>
+<body>
+  <h1>Form Autosave Example</h1>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="email" id="email" placeholder="Enter your email" />
+  </form>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+
+    nameInput.value = localStorage.getItem('name') || '';
+    emailInput.value = localStorage.getItem('email') || '';
+
+
+    nameInput.addEventListener('input', e => {
+      localStorage.setItem('name', e.target.value);
+    });
+    emailInput.addEventListener('input', e => {
+      localStorage.setItem('email', e.target.value);
+    });
+  </script>
+</body>
+</html>
