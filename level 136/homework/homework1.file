@@ -1,0 +1,5 @@
+getDerivedStateFromError →  UI-ს გადართვა შეცდომის ეკრანზე
+
+componentDidCatch →  შეცდომის ლოგირება
+
+reset →  შეცდომის მდგომარეობიდან გამოსვლა
