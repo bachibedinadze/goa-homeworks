@@ -1,0 +1,13 @@
+use test_db
+
+db.film_collection.find({
+  genres: ["Sci-fi", "Adventure", "drama"]
+})
+
+db.film_collection.find({
+  genres: "Drama"
+})
+
+db.film_collection.find({
+    genres: { $all: ["Drama", "Adventure"]}
+})

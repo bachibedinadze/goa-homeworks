@@ -1,0 +1,27 @@
+# Mongosh Example with $gt and $gte
+
+# 1. Switch to a specific database
+use myDatabase
+
+# 2. Show all collections
+show collections
+
+# 3. Show all documents in 'users' collection
+db.users.find()
+
+# 4. Find all users with age greater than 25
+db.users.find({ age: { $gt: 25 } })
+
+# 5. Find all users with age greater than or equal to 25
+db.users.find({ age: { $gte: 25 } })
+
+# Example document in 'users' collection:
+{
+  name: "Nino",
+  age: 30,
+  address: {
+    city: "Tbilisi",
+    street: "Rustaveli Ave",
+    zip: "0100"
+  }
+}

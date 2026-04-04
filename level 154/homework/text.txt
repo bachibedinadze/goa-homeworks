@@ -1,0 +1,33 @@
+# Mongosh Commands Test
+
+1. Current database:
+db
+
+2. Show all databases:
+show dbs
+
+3. Show collections in current database:
+show collections
+
+4. Switch to a specific database:
+use myDatabase
+
+5. Show all documents in a collection:
+db.users.find()
+
+6. Filter documents by age greater than 25:
+db.users.find({ age: { $gt: 25 } })
+
+7. Filter documents by embedded document (address.city = Tbilisi):
+db.users.find({ "address.city": "Tbilisi" })
+
+# Example embedded document in users collection:
+{
+  name: "Nino",
+  age: 30,
+  address: {
+    city: "Tbilisi",
+    street: "Rustaveli Ave",
+    zip: "0100"
+  }
+}

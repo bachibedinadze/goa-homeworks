@@ -1,0 +1,17 @@
+user your_database_name;
+
+db.film_collection.updateOne(
+    { _id: ObjectId("YOUR_ID_HERE") },
+    {
+        $set: { "actors": ["New Actor", "Laurence Fishburne", "Carrier-anne Moss] },
+    }
+)
+
+user your_database_name;
+
+db.film_collection.updateOne(
+    { _id: ObjectId("YOUR_ID_HERE") },
+    {
+        $set: { "actors": ["New Actor", "Laurence Fishburne", "Carrier-anne Moss] },
+    }
+)

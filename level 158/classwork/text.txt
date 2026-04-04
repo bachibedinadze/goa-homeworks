@@ -1,0 +1,13 @@
+use test_db
+
+db.people_collection.insertOne({
+    name: "Giorgi",
+    age: 21,
+    city: "Tbilisi"
+})
+
+db.people_collection.insertMany([
+    { name: "Nika", age: 23, city: "Kutaisi" },
+    { name: "Ana", age: 19, city: "Batumi" },
+    { name: "Luka", age: 25, city: "Rustavi" }
+])

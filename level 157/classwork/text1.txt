@@ -1,0 +1,9 @@
+use test_db
+
+db.film_collection.find({
+    genres: { $elemMatch: { $eq: "Adventure" } }
+})
+
+db.film_collection.countDocuments({
+    genres: { $all: ["Sci-Fi", "Adventure"] }
+})

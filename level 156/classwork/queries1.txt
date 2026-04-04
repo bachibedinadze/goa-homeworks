@@ -1,0 +1,12 @@
+use test_db
+
+db.number_collection.find({}, {_id: 1, number_value_1: 1 })
+
+db.number_collection.find(
+    { number_value_1: { $lt: 500 } },
+    { text_value: 1, _id: 0 }
+    )
+
+db.number_collection.find({ record: { $exists: true } })
+
+db.number_collection.countDocuments({ number_value_1: { $lt: 500 } })
