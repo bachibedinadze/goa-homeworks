@@ -1,0 +1,9 @@
+use main_db
+
+db.users.createIndex({ age: 1 })
+
+printjson(db.users.getIndexes())
+
+const result = db.users.find({ age: 25 }).explain("executionStats")
+
+print("Execution time (ms): " + result.executionStats.executionTimeMillis)

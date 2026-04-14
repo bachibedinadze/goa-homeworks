@@ -1,0 +1,12 @@
+db.myCollection.updateOne(
+  { name: "zYynvAuGVp" },
+  {
+    $set: {
+      name: "Giorgi",
+      ასაკი: 28,
+      ქალაქი: "თბილისი",
+      პროფესია: "დეველოპერი",
+      აქტიური: true
+    }
+  }
+)

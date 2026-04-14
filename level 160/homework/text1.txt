@@ -1,0 +1,70 @@
+
+//Delete one
+
+db.myCollection.deleteOne({ id: 1 })
+
+db.myCollection.deleteOne({ price: { $gt: 400 } })
+
+db.myCollection.deleteOne({ in_stock: false })
+
+db.myCollection.deleteOne({ rating: null })
+
+db.myCollection.deleteOne({ tags: "sale" })
+
+
+//Delete many
+
+db.myCollection.deleteMany({ price: { $lt: 50 } })
+
+db.myCollection.deleteMany({ in_stock: false })
+
+db.myCollection.deleteMany({ rating: { $exists: false } })
+
+db.myCollection.deleteMany({
+  price: { $gt: 300 },
+  in_stock: false
+})
+
+db.myCollection.deleteMany({ tags: { $size: 0 } })
+
+
+// Replace
+
+db.myCollection.replaceOne(
+  { id: 2 },
+  { id: 2, name: "Product A", price: 100 }
+)
+
+db.myCollection.replaceOne(
+  { price: { $gt: 300 } },
+  { name: "Expensive Product", price: 350 }
+)
+
+db.myCollection.replaceOne(
+  { id: 10 },
+  {
+    id: 10,
+    name: "New Product",
+    details: {
+      category: "electronics",
+      warranty: "2 years"
+    }
+  }
+)
+
+// წინასწარ ნახვა (inspect)
+let doc = db.myCollection.findOne({ id: 3 })
+
+db.myCollection.replaceOne(
+  { id: 3 },
+  {
+    id: doc.id,
+    name: doc.name,
+    price: 200
+  }
+)
+
+db.myCollection.replaceOne(
+  { id: 999 },
+  { id: 999, name: "Not Found", price: 0 }
+)

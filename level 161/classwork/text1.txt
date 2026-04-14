@@ -1,0 +1,11 @@
+db.student_collection.createIndex({ name: 1, age -1 })
+
+db.student_collection.find({
+  name: "Giorgi",
+  age: { $gt: 18 }
+})
+
+db.student_collection.find({
+  name: "Giorgi",
+  age: { $gt: 18 }
+}).explain("executionStats")

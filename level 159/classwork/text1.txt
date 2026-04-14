@@ -1,0 +1,6 @@
+db.student_collection.findAndModify({
+  query: { name: "Giorgi" },
+  update: { $set: { rating: 10 } },
+  new: true,
+  upsert: false
+})

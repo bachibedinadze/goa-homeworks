@@ -1,0 +1,13 @@
+use myDatabase
+
+db.myCollection.deleteOne({
+  ასაკი: 25
+})
+
+db.myCollection.deleteMany({
+  ქალაქი: "თბილისი"
+})
+
+db.myCollection.deleteMany({
+  ასაკი: { $gt: 30 }
+})
