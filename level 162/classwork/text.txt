@@ -1,0 +1,33 @@
+db.films.insertMany([
+  {
+    title: "Inception",
+    genre: "sci-fi",
+    rating: 9,
+    actors: ["Leonardo DiCaprio", "Tom Hardy"],
+    reviews: ["amazing", "mind-blowing"]
+  },
+  {
+		title: "Titanic",
+    genre: "drama",
+    rating: 8,
+    actors: ["Leonardo DiCaprio", "Kate Winslet"],
+    reviews: ["emotional", "classic"]
+  },
+  {
+    title: "Avengers",
+    genre: "action",
+    rating: 8,
+    actors: ["Robert Downey Jr.", "Chris Evans"],
+    reviews: ["epic", "fun"]
+  }
+])
+
+db.films.createIndex({ genre: 1, rating -1 })
+
+db.film.find({ genre: "sci-fi", rating: { $gt: 7 } }).explain("executionStats")
+
+db.film.createIndex({ actors: 1, rating: 1 })
+
+db.film.find({ actors: "Leonardo DiCaprio", rating: { $gt: 7 } }).explain("executionStats")
+
+db.film.createIndex({ actors: 1, reviews: 1 })
