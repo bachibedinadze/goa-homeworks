@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
 import validator from "validator";
-import crypto from "crypto";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
 const usersSchema = new mongoose.Schema(
     {
@@ -23,8 +20,7 @@ const usersSchema = new mongoose.Schema(
             required: [true, "Password is required"],
             minlength: 6,
             maxLength: 12,
-            trim: true,
-            select: false
+            trim: true
         },
         role: {
             type: String,
@@ -45,21 +41,6 @@ const usersSchema = new mongoose.Schema(
         timestamps: true
     }
 );
-usersSchema.pre("save", async function () {
-    if (!this.isModified("password")) return;
-    this.password = await bcrypt.hash(this.password, 10);
-});
-usersSchema.methods.createEmailVerificationToken = function() {
-    const code = crypto.randomBytes(12).toString("hex");
-    this.verificationCode = code;
-    return code;
-};
-usersSchema.methods.signToken = function() {
-    return jwt.sign({id: this._id}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_EXPIRES_IN})
-};
-usersSchema.methods.comparePassword = async function(candidatePassword) {
-    return await bcrypt.compare(candidatePassword, this.password)
-};
 
 const Users = mongoose.model("Users", usersSchema);
 

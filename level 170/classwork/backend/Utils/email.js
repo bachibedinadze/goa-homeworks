@@ -1,26 +1,26 @@
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     auth: {
         user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD
-    }
+        pass: process.env.EMAIL_PASSWORD,
+    },
 });
 
-export const sendEmail = async (options) => {
+export const sendEmail = async ({ to, subject, text, html }) => {
     try {
-        await transporter.sendMail({
-            from: '"Group 56 phones store" <no-reply>',
-            to: options.to,
-            subject: options.subject,
-            html: options.html
-        })
-    } catch(err) {
-        console.error("Error:", err)
+        const info = await transporter.sendMail({
+            from: '"My App" <no-reply@myapp.com',
+            to,
+            subject,
+            text,
+            html,
+        });
+
+        console.log("Email sent:", info.messageId);
+    }   catch (error) {
+            console.error("Error sending email:", error);
+        }
     }
-}
