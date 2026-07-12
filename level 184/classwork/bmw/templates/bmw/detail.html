@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ car.name }}</title>
+</head>
+<body>
+
+<h1>{{ car.name }}</h1>
+
+<p>Model: {{ car.model }}</p>
+<p>Year: {{ car.year }}</p>
+<p>Color: {{ car.color }}</p>
+<p>Price: {{ car.price }}</p>
+
+<a href="{% url 'bmw_delete' car.id %}">
+    <button>Delete</button>
+</a>
+
+<br><br>
+
+<a href="{% url 'bmw_list' %}">
+    Back to BMW List
+</a>
+
+</body>
+</html>

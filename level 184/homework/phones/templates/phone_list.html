@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phones</title>
+</head>
+<body>
+
+    <h1>All Phones</h1>
+
+    {% for phone in phones %}
+        <p>
+            <a href="{% url 'phone_detail' phone.id %}">
+                {{ phone.name }}
+            </a>
+        </p>
+    {% empty %}
+        <p>No phones found.</p>
+    {% endfor %}
+
+</body>
+</html>

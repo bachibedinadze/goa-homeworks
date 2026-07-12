@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMW List</title>
+</head>
+<body>
+
+<h1>BMW Cars</h1>
+
+{% for car in cars %}
+    <h3>
+        <a href="{% url 'bmw_detail' car.id %}">
+            {{ car.name }}
+        </a>
+    </h3>
+{% empty %}
+    <p>No BMW cars found.</p>
+{% endfor %}
+
+</body>
+</html>
